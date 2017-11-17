@@ -40,13 +40,6 @@ header h1{
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 20px 15px 20px 60px;
-}
 
 /*font size for the icons*/
 nav i.fa {
@@ -125,4 +118,62 @@ li.song:nth-child(2n) {
 
 .album {
   margin: 3px 35px;
+}
+
+
+    /*
+    *
+    * header
+    *
+    */
+    .header-title {
+      font-size: 2em;
+    }
+
+    .header-menu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 1em;
+    }
+    .header-menu svg {
+        width: 32px;
+        fill: black;
+    }
+
+    /*
+    *
+    * Navigation
+    *
+    */
+    .nav {
+      z-index: 10;
+      width: 300px;
+      height: 100%;
+      background-color: black;
+      position: absolute;
+      transform: translate(calc(100vw), 0);
+      /* Optionally, we animate the drawer. */
+      transition: transform 0.3s ease;
+    }
+    .nav.open {
+      transform: translate(calc(100vw - 300px), 0);
+    }
+    .nav-item {
+      display: list-item;
+      border-bottom: 1px solid #424242;
+      width: 100%;
+      text-align: left;
+      padding: 1rem
+    }
+    .nav-item a {
+      color: white;
+    }
+
+
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 1024px) {
+
 }
